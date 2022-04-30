@@ -6,33 +6,3 @@
 	justify-content: space-between;
 	align-items: center;
 }
-
-nav {
-	width: 100%;
-	height: 130px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.logo {
-	width: 250px;
-	height: 100%;
-}
-
-.logo img {
-	width: 100%;
-	height: 100%;
-}
-
-.options {
-	width: 30%;
-	display: flex;
-	justify-content: space-around;
-	font-size: 2rem;
-	font-weight: bold;
-}
-
-.options li {
-	cursor: pointer;
-}

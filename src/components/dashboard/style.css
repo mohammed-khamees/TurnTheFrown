@@ -1,0 +1,24 @@
+tr,
+th,
+td {
+	border: 1px solid black;
+}
+
+.dashboard {
+	width: 70%;
+	height: 70%;
+	margin: 0 auto;
+	border: 1px solid black;
+	margin-top: 5%;
+	font-size: 2rem;
+}
+
+.data {
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.myUsername {
+	text-align: center;
+	background-color: aquamarine;
+}

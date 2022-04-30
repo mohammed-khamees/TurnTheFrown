@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
+import Header from '../header';
 import './style.css';
 
 const UserDashboard = () => {
@@ -27,22 +28,28 @@ const UserDashboard = () => {
 	}, []);
 
 	return (
-		<div className="UserDashboard">
-			<table>
+		<>
+			<Header />
+			<table className="dashboard">
 				<tr>
 					<th>No.</th>
 					<th>Username</th>
 					<th>No. Of Turns</th>
 				</tr>
 				{records.map((record, index) => (
-					<tr key={index}>
-						<td>{index + 1}</td>
-						<td>{record.user.username}</td>
-						<td>{record.amountOfTurn}</td>
+					<tr
+						className={
+							record.user.username === auth.username ? 'myUsername' : 'data'
+						}
+						key={index}
+					>
+						<td className="No">{index + 1}</td>
+						<td className="username">{record.user.username}</td>
+						<td className="amountOfTurn">{record.amountOfTurn}</td>
 					</tr>
 				))}
 			</table>
-		</div>
+		</>
 	);
 };
 
