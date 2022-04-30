@@ -8,12 +8,14 @@ import Game from './components/game';
 import Result from './components/result';
 import Dashboard from './components/dashboard';
 import UserDashboard from './components/UserDashboard';
+import Header from './components/header';
 import './App.css';
 
 function App() {
 	return (
 		<BrowserRouter>
 			<div className="App">
+				<Header />
 				<Routes>
 					<Route exact path="/" element={<Landing />} />
 					<Route exact path="/login" element={<Login />} />

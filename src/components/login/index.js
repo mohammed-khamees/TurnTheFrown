@@ -29,35 +29,32 @@ const Login = () => {
 	};
 
 	return (
-		<>
-			<Header />
-			<div className="loginContainer">
-				<form className="loginForm" onSubmit={signIn}>
-					<input
-						type="text"
-						placeholder="Enter Your Username..."
-						onChange={(e) => setUsername(e.target.value)}
-						required
-					/>
-					<input
-						type="password"
-						placeholder="Enter Your Password..."
-						onChange={(e) => setPassword(e.target.value)}
-						required
-					/>
-					<button>Login</button>
-					<p>
-						Don't have an Account?{' '}
-						<span
-							style={{ color: 'blue', cursor: 'pointer' }}
-							onClick={() => navigate('/signUp')}
-						>
-							Register
-						</span>
-					</p>
-				</form>
-			</div>
-		</>
+		<div className="loginContainer">
+			<form className="loginForm" onSubmit={signIn}>
+				<input
+					type="text"
+					placeholder="Enter Your Username..."
+					onChange={(e) => setUsername(e.target.value)}
+					required
+				/>
+				<input
+					type="password"
+					placeholder="Enter Your Password..."
+					onChange={(e) => setPassword(e.target.value)}
+					required
+				/>
+				<button>Login</button>
+				<p>
+					Don't have an Account?{' '}
+					<span
+						style={{ color: 'blue', cursor: 'pointer' }}
+						onClick={() => navigate('/signUp')}
+					>
+						Register
+					</span>
+				</p>
+			</form>
+		</div>
 	);
 };
 

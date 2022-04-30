@@ -1,7 +1,7 @@
 .signUpContainer {
-	background-color: aqua;
+	margin-top: 3rem;
 	width: 50%;
-	height: 60vh;
+	height: 80vh;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -28,7 +28,7 @@
 	margin-bottom: 2rem;
 	padding-left: 1rem;
 	border-radius: 2rem;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 .signUpForm button {
@@ -39,13 +39,16 @@
 	border-radius: 2rem;
 	transition: all 0.3s ease-in-out;
 	margin-bottom: 1rem;
+	cursor: pointer;
+	background-color: rgb(255, 170, 4);
+	color: rgb(255, 83, 72);
+	border: none;
 }
 
 .signUpForm button:hover {
-	background-color: blue;
-	color: red;
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
+	background-color: rgb(153, 153, 255);
+	color: rgb(255, 83, 72);
+	transition: all 0.3s ease;
 }
 
 .signUpForm p {

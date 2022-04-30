@@ -1,18 +1,17 @@
 nav {
 	width: 100%;
-	height: 130px;
+	height: 100px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	text-transform: capitalize;
-	padding: 0 3rem;
 	font-size: 1.5rem;
 	font-weight: bold;
 }
 
 .logoContainer {
-	width: 20%;
-	height: 100px;
+	width: 15%;
+	height: 70px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -24,12 +23,81 @@ nav {
 	cursor: pointer;
 }
 
-.options {
-	width: 40%;
+.bars {
+	width: 10%;
+	cursor: pointer;
+	font-size: 2.5rem;
+	transition: all 0.3s ease-in-out;
+	color: rgb(255, 170, 4);
+}
+
+.bars:hover {
+	color: rgb(255, 83, 72);
+	transition: all 0.3s ease-in-out;
+}
+
+.sideNav {
+	width: 25%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+	background-color: rgb(255, 170, 4);
+}
+
+.options {
+	padding-top: 6rem;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
 }
 
 .options li {
 	cursor: pointer;
+	margin-bottom: 2rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.options li:hover {
+	color: rgb(255, 83, 72);
+	transition: all 0.3s ease-in-out;
+}
+
+.closeNav {
+	position: absolute;
+	top: 3%;
+	right: 6%;
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: rgb(255, 83, 72);
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.closeNav:hover {
+	color: rgb(255, 83, 72);
+	transition: all 0.3s ease-in-out;
+}
+
+.profile {
+	padding-bottom: 3rem;
+	font-size: 1.8rem;
+	color: white;
+	text-align: center;
+}
+
+.options .profile:hover {
+	color: white;
+	cursor: default;
+}
+
+.highestScore {
+	font-size: 1rem;
+	display: block;
 }

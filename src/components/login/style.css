@@ -1,5 +1,4 @@
 .loginContainer {
-	background-color: aqua;
 	width: 50%;
 	height: 60vh;
 	position: absolute;
@@ -28,7 +27,7 @@
 	margin-bottom: 2rem;
 	padding-left: 1rem;
 	border-radius: 2rem;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 .loginForm button {
@@ -37,15 +36,18 @@
 	font-size: 2rem;
 	font-weight: bold;
 	border-radius: 2rem;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease;
 	margin-bottom: 1rem;
+	background-color: rgb(255, 170, 4);
+	color: rgb(255, 83, 72);
+	border: none;
+	cursor: pointer;
 }
 
 .loginForm button:hover {
-	background-color: blue;
-	color: red;
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
+	background-color: rgb(153, 153, 255);
+	color: rgb(255, 83, 72);
+	transition: all 0.3s ease;
 }
 
 .loginForm p {
