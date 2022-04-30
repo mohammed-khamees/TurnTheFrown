@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { ReactComponent as HappyFace } from './../../assets/coin-happy.svg';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from './../../reducers/auth';
-import Logo from './../../assets/logo.png';
+import axios from 'axios';
 import './style.css';
 
 const Header = () => {
+	const [userHighestScore, setUserHighestScore] = useState('');
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 
@@ -13,25 +15,46 @@ const Header = () => {
 		return state.auth;
 	});
 
+	const getUserHighestScore = async () => {
+		const result = await axios.get(
+			`${process.env.REACT_APP_API_URL}records/${auth.userId}`,
+			{
+				headers: {
+					Authorization: `Bearer ${auth.token}`,
+				},
+			},
+		);
+		setUserHighestScore(result.data[0].amountOfTurn);
+	};
+
+	useEffect(() => {
+		getUserHighestScore();
+	}, []);
+
 	const signOut = () => {
 		dispatch(logout());
-		navigate('./');
+		navigate('/');
 	};
+
 	return (
 		<nav>
-			<div className="logo">
-				<img src={Logo} alt="Logo" />
+			<div className="logoContainer" onClick={() => navigate('/')}>
+				<HappyFace className="logo" />
+				{auth.username && (
+					<p>
+						Hello {auth.username} ({userHighestScore} turns)
+					</p>
+				)}
 			</div>
 			{!auth.username ? (
 				<ul className="options">
-					<li onClick={() => navigate('./login')}>Login</li>
-					<li onClick={() => navigate('./signUp')}>Register</li>
+					<li onClick={() => navigate('/')}>Home</li>
+					<li onClick={() => navigate('/login')}>Login</li>
+					<li onClick={() => navigate('/signUp')}>Register</li>
 				</ul>
 			) : (
 				<ul className="options">
-					<li>Hello {auth.username} </li>
 					<li onClick={() => navigate('/dashboard')}>Heros Dashboard</li>
-					<li onClick={() => navigate('/myScores')}>Your Scores</li>
 					<li onClick={signOut}>Logout</li>
 				</ul>
 			)}
