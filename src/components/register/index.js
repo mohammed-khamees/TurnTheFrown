@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
 
-function Register() {
+const Register = () => {
 	const [username, setUsername] = useState('');
 	const [confirmedUsername, setConfirmedUsername] = useState('');
 	const [passward, setPassward] = useState('');
@@ -57,6 +57,6 @@ function Register() {
 			</form>
 		</div>
 	);
-}
+};
 
 export default Register;

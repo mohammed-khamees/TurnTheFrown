@@ -1,0 +1,10 @@
+/* coins */
+
+.coins {
+	width: 50%;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}

@@ -1,8 +1,12 @@
 import React from 'react';
 import './style.css';
 
-function FilpBtn() {
-	return <div>FilpBtn</div>;
+function FilpBtn({ flip }) {
+	return (
+		<button className="flipBtn" onClick={flip}>
+			Flip
+		</button>
+	);
 }
 
 export default FilpBtn;

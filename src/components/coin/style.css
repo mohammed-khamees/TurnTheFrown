@@ -1,0 +1,17 @@
+/* coin */
+.coin {
+	position: relative;
+	width: 100px;
+	height: 100px;
+}
+
+.happy {
+	width: 100%;
+	height: 100%;
+}
+
+.sad {
+	width: 100%;
+	height: 100%;
+	display: none;
+}

@@ -1,0 +1,7 @@
+/* counter */
+.counter {
+	position: absolute;
+	top: 10%;
+	right: 5%;
+	font-size: 3rem;
+}

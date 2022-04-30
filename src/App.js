@@ -1,23 +1,29 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { ReactComponent as Happy } from './assets/coin-happy.svg';
-import { ReactComponent as Sad } from './assets/coin-sad.svg';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Landing from './components/landing';
 import Login from './components/login';
 import Register from './components/register';
-
+import Game from './components/game';
+import Result from './components/result';
+import Dashboard from './components/result';
 import './App.css';
 
 function App() {
 	return (
-		<div className="App">
-			<Routes>
-				<Route exact path="/" element={<Login />} />
-				<Route exact path="/signUp" element={<Register />} />
-				{/* <Route path="/" element={< />} />
-				<Route path="/game" element={< />} />
-				<Route path="/result" element={< />} /> */}
-			</Routes>
-		</div>
+		<BrowserRouter>
+			<div className="App">
+				<Routes>
+					{/* <Route exact path="/" element={<Landing />} /> */}
+					<Route exact path="/login" element={<Login />} />
+					<Route exact path="/signUp" element={<Register />} />
+					{/* <Route exact path="/game" element={<Game />} /> */}
+					<Route exact path="/" element={<Game />} />
+					<Route exact path="/result" element={<Result />} />
+					<Route exact path="/dashboard" element={<Dashboard />} />
+				</Routes>
+			</div>
+		</BrowserRouter>
 	);
 }
 
