@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import './style.css';
 
-function FilpBtn({ flip }) {
-	const [hide, setHide] = useState(false);
-	const [userHighestScore, setUserHighestScore] = useState('');
-
+function FilpBtn({ flip, userHighestScore, setWin }) {
 	const state = useSelector((state) => {
 		return state;
 	});
@@ -27,43 +24,21 @@ function FilpBtn({ flip }) {
 		}
 	};
 
-	const getUserHighestScore = async () => {
-		try {
-			const result = await axios.get(
-				`${process.env.REACT_APP_API_URL}records/${state.auth.userId}`,
-				{
-					headers: {
-						Authorization: `Bearer ${state.auth.token}`,
-					},
-				},
-			);
-
-			setUserHighestScore(result.data.amountOfTurn);
-		} catch (error) {
-			console.log(error);
-		}
-	};
-
 	useEffect(() => {
-		getUserHighestScore();
 		if (state.coins.happyCoins.length === 4) {
 			if (state.coins.noOfTurns < userHighestScore) {
 				addNewRecord();
 			}
-			setHide(true);
+			setWin(true);
 		}
 		// eslint-disable-next-line
 	}, [state.coins]);
 
 	return (
 		<>
-			{!hide ? (
-				<button className="flipBtn" onClick={flip}>
-					Flip
-				</button>
-			) : (
-				<p>you win</p>
-			)}
+			<button className="flipBtn" onClick={flip}>
+				Flip
+			</button>
 		</>
 	);
 }

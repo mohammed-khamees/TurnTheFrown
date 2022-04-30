@@ -27,6 +27,9 @@ const coins = (state = intialState, action) => {
 				noOfTurns: payload.noOfTurns,
 			};
 
+		case 'RETRY':
+			return payload;
+
 		default:
 			return state;
 	}
@@ -45,5 +48,16 @@ export const clear = (payload) => {
 	return {
 		type: 'CLEAR',
 		payload: payload,
+	};
+};
+
+export const retry = () => {
+	return {
+		type: 'RETRY',
+		payload: {
+			selectedCoins: [],
+			happyCoins: [],
+			noOfTurns: 0,
+		},
 	};
 };

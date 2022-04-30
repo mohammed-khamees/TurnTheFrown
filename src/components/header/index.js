@@ -33,7 +33,7 @@ const Header = () => {
 
 	useEffect(() => {
 		getUserHighestScore();
-	}, []);
+	}, [auth]);
 
 	const signOut = () => {
 		dispatch(logout());
