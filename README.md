@@ -14,4 +14,4 @@
 
 **Important Note:** if the Server side link `https://turnthefrown.herokuapp.com/` didn't work please read the `README.md` for [this repo](https://github.com/mohammed-khamees/TurnTheFrownBack) to set the server up locally and replace the varilable inside the `.env` file to `REACT_APP_API_URL=https://localhost:5000/` and it sould work perfictly on the server side and on the client side.
 
-# Enjoy the App
+## Enjoy the App
