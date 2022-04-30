@@ -1,5 +1,6 @@
 const intialState = {
 	selectedCoins: [],
+	happyCoins: [],
 };
 
 const coins = (state = intialState, action) => {
@@ -16,10 +17,12 @@ const coins = (state = intialState, action) => {
 					state.selectedCoins.length < 3
 						? [...state.selectedCoins, payload]
 						: state.selectedCoins.filter((item) => item != payload),
+
+				happyCoins: state.happyCoins,
 			};
 
 		case 'CLEAR':
-			return { selectedCoins: payload };
+			return { selectedCoins: [], happyCoins: payload };
 
 		default:
 			return state;
@@ -42,9 +45,9 @@ export const toggleCoin = (coin) => {
 	};
 };
 
-export const clear = () => {
+export const clear = (happyCoins) => {
 	return {
 		type: 'CLEAR',
-		payload: [],
+		payload: happyCoins,
 	};
 };
