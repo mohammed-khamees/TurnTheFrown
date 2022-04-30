@@ -16,9 +16,8 @@ function Landing() {
 	return (
 		<div className="Container">
 			<div className="animatedGIF">
-				<img src={FrownFace} alt="" />
+				<img src={FrownFace} alt="animatedGIF" />
 			</div>
-			{/* <p className="description">Learn, think and grow without limits</p> */}
 
 			<div className="rules">
 				<p>How to play the game:</p>
@@ -32,10 +31,10 @@ function Landing() {
 						you going to keep fliping the coins until you have four coins with
 						happy faces.
 					</li>
-					<li>each three coins flip count as a turn</li>
+					<li>each three coins flip count as a turn.</li>
 					<li>
 						the least turn you have to flip all of the coins to happy face the
-						highest score you are going to get
+						highest score you are going to get.
 					</li>
 				</ul>
 				<button

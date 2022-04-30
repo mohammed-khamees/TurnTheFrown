@@ -10,17 +10,22 @@ nav {
 }
 
 .logoContainer {
-	width: 15%;
+	width: 25%;
 	height: 70px;
 	display: flex;
+	justify-content: center;
 	align-items: center;
-	justify-content: space-between;
+	cursor: pointer;
 }
 
 .logo {
-	width: 100%;
 	height: 100%;
-	cursor: pointer;
+}
+
+.logoContainer p {
+	margin-left: 1rem;
+	font-size: 1.3rem;
+	font-weight: bold;
 }
 
 .bars {
@@ -45,6 +50,7 @@ nav {
 	display: flex;
 	justify-content: center;
 	background-color: rgb(255, 170, 4);
+	z-index: 5;
 }
 
 .options {

@@ -7,7 +7,6 @@ import Register from './components/register';
 import Game from './components/game';
 import Result from './components/result';
 import Dashboard from './components/dashboard';
-import UserDashboard from './components/UserDashboard';
 import Header from './components/header';
 import './App.css';
 
@@ -23,7 +22,6 @@ function App() {
 					<Route exact path="/game" element={<Game />} />
 					<Route exact path="/result" element={<Result />} />
 					<Route exact path="/dashboard" element={<Dashboard />} />
-					<Route exact path="/myScores" element={<UserDashboard />} />
 				</Routes>
 			</div>
 		</BrowserRouter>

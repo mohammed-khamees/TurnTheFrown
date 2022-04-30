@@ -21,25 +21,27 @@ const Dashboard = () => {
 	}, []);
 
 	return (
-		<table className="dashboard">
-			<tr>
-				<th>No.</th>
-				<th>Username</th>
-				<th>No. Of Turns</th>
-			</tr>
-			{records.map((record, index) => (
-				<tr
-					className={
-						record.user.username === auth.username ? 'myUsername' : 'data'
-					}
-					key={index}
-				>
-					<td className="No">{index + 1}</td>
-					<td className="username">{record.user.username}</td>
-					<td className="amountOfTurn">{record.amountOfTurn}</td>
+		<>
+			<div className="dashboardContainer"></div>
+			<table className="dashboard">
+				<tr className="tableHeader">
+					<th colSpan={2}>Username</th>
+					<th>No. Of Turns</th>
 				</tr>
-			))}
-		</table>
+				{records.map((record, index) => (
+					<tr
+						className={
+							record.user.username === auth.username ? 'myUsername' : 'data'
+						}
+						key={index}
+					>
+						<td className="tableSideCol">{index + 1}</td>
+						<td className="username">{record.user.username}</td>
+						<td className="amountOfTurn">{record.amountOfTurn}</td>
+					</tr>
+				))}
+			</table>
+		</>
 	);
 };
 

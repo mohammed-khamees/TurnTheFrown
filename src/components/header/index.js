@@ -44,6 +44,7 @@ const Header = () => {
 		<nav>
 			<div className="logoContainer" onClick={() => navigate('/')}>
 				<HappyFace className="logo" />
+				<p>Turn The Frown</p>
 			</div>
 
 			<FaBars onClick={() => setToggle(true)} className="bars" />

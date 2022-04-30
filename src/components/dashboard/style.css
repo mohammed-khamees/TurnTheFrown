@@ -1,16 +1,47 @@
-tr,
-th,
-td {
-	border: 1px solid black;
+.dashboardContainer {
+	width: 100vw;
+	height: 100vh;
+	background-image: url('./../../assets/bg.gif');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-color: rgb(246, 246, 246);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
 
 .dashboard {
 	width: 70%;
 	height: 70%;
 	margin: 0 auto;
-	border: 1px solid black;
 	margin-top: 5%;
 	font-size: 2rem;
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+	text-transform: capitalize;
+}
+
+tr,
+th,
+td {
+	border: 1px solid black;
+}
+
+.tableHeader {
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+}
+
+.tableHeader th {
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+}
+
+.tableHeader,
+.tableSideCol {
+	background-color: rgb(255, 170, 4);
 }
 
 .data {
@@ -20,5 +51,5 @@ td {
 
 .myUsername {
 	text-align: center;
-	background-color: aquamarine;
+	background-color: rgb(255, 83, 72);
 }
