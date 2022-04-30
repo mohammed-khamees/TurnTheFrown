@@ -1,21 +1,43 @@
+.signUpbg {
+	width: 100vw;
+	height: 100%;
+	background-image: url('./../../assets/halfbg.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-color: rgb(246, 246, 246);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
 .signUpContainer {
-	margin-top: 3rem;
-	width: 50%;
+	width: 100%;
 	height: 80vh;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	text-transform: capitalize;
 }
 
+.animatedSignGif {
+	width: 50%;
+	height: 100vh;
+	background-image: url('./../../assets/bg.gif');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-color: rgb(246, 246, 246);
+}
+
 .signUpForm {
-	width: 80%;
-	height: 80%;
+	width: 50%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -23,12 +45,13 @@
 }
 
 .signUpForm input {
-	width: 90%;
+	width: 70%;
 	height: 50px;
 	margin-bottom: 2rem;
 	padding-left: 1rem;
 	border-radius: 2rem;
 	font-size: 1.2rem;
+	border: none;
 }
 
 .signUpForm button {
@@ -42,7 +65,7 @@
 	cursor: pointer;
 	background-color: rgb(255, 170, 4);
 	color: rgb(255, 83, 72);
-	border: none;
+	border: 2px solid white;
 }
 
 .signUpForm button:hover {

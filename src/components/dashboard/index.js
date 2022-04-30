@@ -22,7 +22,7 @@ const Dashboard = () => {
 
 	return (
 		<>
-			<div className="dashboardContainer"></div>
+			<div className="dashboardbg"></div>
 			<table className="dashboard">
 				<tr className="tableHeader">
 					<th colSpan={2}>Username</th>

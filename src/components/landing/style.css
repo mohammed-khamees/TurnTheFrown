@@ -1,7 +1,19 @@
+.Landingbg {
+	width: 100vw;
+	height: 100vh;
+	background-image: url('./../../assets/halfbg.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-color: rgb(246, 246, 246);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
 .Container {
-	margin-top: 3rem;
 	width: 100%;
-	height: 60vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -10,7 +22,7 @@
 }
 
 .animatedGIF {
-	width: 50%;
+	width: 40%;
 }
 
 .animatedGIF img {
@@ -19,7 +31,7 @@
 }
 
 .rules {
-	margin-top: 4rem;
+	margin-top: 2rem;
 	width: 40%;
 	height: 100%;
 	display: flex;
@@ -27,9 +39,12 @@
 	justify-content: space-between;
 	align-items: center;
 	text-transform: capitalize;
+	color: white;
+	font-size: 2rem;
 }
 
 .rules p {
+	margin-bottom: 1rem;
 	width: 80%;
 	text-align: left;
 }
@@ -46,6 +61,7 @@
 .rules li {
 	width: 100%;
 	list-style-type: disc;
+	margin-bottom: 0.5rem;
 }
 
 .playBtn {
@@ -57,7 +73,7 @@
 	font-weight: bold;
 	transition: all 0.3s ease-in-out;
 	cursor: pointer;
-	background-color: rgb(255, 170, 4);
+	background-color: white;
 	color: rgb(255, 83, 72);
 	border: none;
 }
