@@ -1,28 +1,31 @@
 const intialState = {
 	selectedCoins: [],
 	happyCoins: [],
+	noOfTurns: 0,
 };
 
 const coins = (state = intialState, action) => {
 	const { type, payload } = action;
 
 	switch (type) {
-		case 'SELECTED_COINS':
-			return { selectedCoins: [...payload] };
-
 		case 'TOGGLE_COIN':
 			return {
 				selectedCoins:
 					!state.selectedCoins.includes(payload) &&
 					state.selectedCoins.length < 3
 						? [...state.selectedCoins, payload]
-						: state.selectedCoins.filter((item) => item != payload),
+						: state.selectedCoins.filter((item) => item !== payload),
 
 				happyCoins: state.happyCoins,
+				noOfTurns: state.noOfTurns,
 			};
 
 		case 'CLEAR':
-			return { selectedCoins: [], happyCoins: payload };
+			return {
+				selectedCoins: [],
+				happyCoins: payload.happyCoins,
+				noOfTurns: payload.noOfTurns,
+			};
 
 		default:
 			return state;
@@ -31,13 +34,6 @@ const coins = (state = intialState, action) => {
 
 export default coins;
 
-export const getSelectedCoins = (selectedCoins) => {
-	return {
-		type: 'SELECTED_COINS',
-		payload: selectedCoins,
-	};
-};
-
 export const toggleCoin = (coin) => {
 	return {
 		type: 'TOGGLE_COIN',
@@ -45,9 +41,9 @@ export const toggleCoin = (coin) => {
 	};
 };
 
-export const clear = (happyCoins) => {
+export const clear = (payload) => {
 	return {
 		type: 'CLEAR',
-		payload: happyCoins,
+		payload: payload,
 	};
 };
