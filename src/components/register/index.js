@@ -1,21 +1,27 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './style.css';
 
 const Register = () => {
 	const [username, setUsername] = useState('');
 	const [confirmedUsername, setConfirmedUsername] = useState('');
-	const [passward, setPassward] = useState('');
-	const [confirmedPassward, setConfirmedPassward] = useState('');
+	const [password, setPassword] = useState('');
+	const [confirmedpassword, setConfirmedPassword] = useState('');
 
 	let navigate = useNavigate();
 
-	const register = (e) => {
+	const register = async (e) => {
 		e.preventDefault();
 		try {
 			if (username === confirmedUsername) {
-				if (passward === confirmedPassward) {
-					navigate('/game');
+				if (password === confirmedpassword) {
+					await axios.post(`${process.env.REACT_APP_API_URL}signUp`, {
+						username,
+						password,
+					});
+
+					navigate('/login');
 				} else {
 					console.log('your password should matched');
 				}
@@ -23,7 +29,7 @@ const Register = () => {
 				console.log('your username should matched');
 			}
 		} catch (error) {
-			console.log(error);
+			console.log(error.response.data);
 		}
 	};
 	return (
@@ -44,17 +50,26 @@ const Register = () => {
 				<input
 					type="password"
 					placeholder="Enter Your Password..."
-					onChange={(e) => setPassward(e.target.value)}
+					onChange={(e) => setPassword(e.target.value)}
 					required
 				/>
 				<input
 					type="password"
 					placeholder="Confirm Your Password..."
-					onChange={(e) => setConfirmedPassward(e.target.value)}
+					onChange={(e) => setConfirmedPassword(e.target.value)}
 					required
 				/>
 				<button>Register</button>
 			</form>
+			<p>
+				I already have an account?{' '}
+				<span
+					style={{ color: 'blue', cursor: 'pointer' }}
+					onClick={() => navigate('/login')}
+				>
+					Login
+				</span>
+			</p>
 		</div>
 	);
 };

@@ -6,7 +6,8 @@ import Login from './components/login';
 import Register from './components/register';
 import Game from './components/game';
 import Result from './components/result';
-import Dashboard from './components/result';
+import Dashboard from './components/dashboard';
+import UserDashboard from './components/UserDashboard';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 					<Route exact path="/game" element={<Game />} />
 					<Route exact path="/result" element={<Result />} />
 					<Route exact path="/dashboard" element={<Dashboard />} />
+					<Route exact path="/myScores" element={<UserDashboard />} />
 				</Routes>
 			</div>
 		</BrowserRouter>

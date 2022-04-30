@@ -1,21 +1,30 @@
 const intialState = {
-	user: '',
+	username: '',
+	userId: '',
 	token: '',
 };
+
+const userInfo = JSON.parse(localStorage.getItem('userInfo'));
 
 const signIn = (state = intialState, action) => {
 	const { type, payload } = action;
 
 	switch (type) {
 		case 'LOGIN':
-			const { user, token } = payload;
-			return { user, token };
+			localStorage.setItem('userInfo', JSON.stringify(payload));
+			const { username, userId, token } = payload;
+			return { username, userId, token };
 
 		case 'LOGOUT':
-			return { user: payload.user, token: payload.token };
+			localStorage.clear();
+			return payload;
 
 		default:
-			return state;
+			return {
+				username: userInfo ? userInfo.username : '',
+				userId: userInfo ? userInfo.userId : '',
+				token: userInfo ? userInfo.token : '',
+			};
 	}
 };
 
@@ -28,9 +37,9 @@ export const login = (user) => {
 	};
 };
 
-export const logout = (user) => {
+export const logout = () => {
 	return {
 		type: 'LOGOUT',
-		payload: user,
+		payload: { username: '', userId: '', token: '' },
 	};
 };
