@@ -14,11 +14,10 @@ function App() {
 		<BrowserRouter>
 			<div className="App">
 				<Routes>
-					{/* <Route exact path="/" element={<Landing />} /> */}
+					<Route exact path="/" element={<Landing />} />
 					<Route exact path="/login" element={<Login />} />
 					<Route exact path="/signUp" element={<Register />} />
-					{/* <Route exact path="/game" element={<Game />} /> */}
-					<Route exact path="/" element={<Game />} />
+					<Route exact path="/game" element={<Game />} />
 					<Route exact path="/result" element={<Result />} />
 					<Route exact path="/dashboard" element={<Dashboard />} />
 				</Routes>
