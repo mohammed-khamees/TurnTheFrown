@@ -3,6 +3,7 @@ import { ReactComponent as HappyFace } from './../../assets/coin-happy.svg';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from './../../reducers/auth';
+import { retry } from './../../reducers/coins';
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import axios from 'axios';
@@ -38,6 +39,7 @@ const Header = () => {
 
 	const signOut = () => {
 		dispatch(logout());
+		dispatch(retry());
 		navigate('/');
 	};
 
