@@ -53,3 +53,16 @@ td {
 	text-align: center;
 	background-color: rgb(255, 83, 72);
 }
+
+@media screen and (max-width: 610px) {
+	.dashboard {
+		margin: 10% auto 0;
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.dashboard {
+		font-size: 1rem;
+	}
+}
