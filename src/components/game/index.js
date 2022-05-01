@@ -33,7 +33,7 @@ const Game = () => {
 				},
 			);
 
-			setUserHighestScore(result.data.amountOfTurn);
+			if (result.data) setUserHighestScore(result.data.amountOfTurn);
 		} catch (error) {
 			console.log(error);
 		}

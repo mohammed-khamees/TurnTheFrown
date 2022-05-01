@@ -28,7 +28,7 @@ const Header = () => {
 			},
 		);
 
-		setUserHighestScore(result.data.amountOfTurn);
+		if (result.data) setUserHighestScore(result.data.amountOfTurn);
 	};
 
 	useEffect(() => {

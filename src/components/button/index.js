@@ -26,9 +26,14 @@ function FilpBtn({ flip, userHighestScore, setWin }) {
 
 	useEffect(() => {
 		if (state.coins.happyCoins.length === 4) {
-			if (state.coins.noOfTurns < userHighestScore) {
+			if (!userHighestScore) {
 				addNewRecord();
+			} else {
+				if (state.coins.noOfTurns < userHighestScore) {
+					addNewRecord();
+				}
 			}
+
 			setWin(true);
 		}
 		// eslint-disable-next-line
