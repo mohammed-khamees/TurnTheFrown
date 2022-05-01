@@ -20,19 +20,9 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	text-transform: capitalize;
-}
-
-.animatedSignGif {
-	width: 50%;
-	height: 100vh;
-	background-image: url('./../../assets/bg.gif');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-color: rgb(246, 246, 246);
 }
 
 .signUpForm {
@@ -76,4 +66,50 @@
 
 .signUpForm p {
 	font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.signUpForm input {
+		height: 40px;
+		margin-bottom: 1rem;
+		font-size: 1rem;
+	}
+
+	.signUpForm button {
+		width: 120px;
+		height: 40px;
+		font-size: 1.5rem;
+	}
+
+	.signUpForm p {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.signUpbg {
+		display: none;
+	}
+
+	.signUpForm {
+		width: 80%;
+	}
+
+	.signUpForm input {
+		width: 100%;
+		border: 1px solid black;
+		height: 40px;
+		margin-bottom: 1rem;
+		font-size: 0.9rem;
+	}
+
+	.signUpForm button {
+		width: 100px;
+		height: 35px;
+		font-size: 1.2rem;
+	}
+
+	.signUpForm p {
+		font-size: 0.7rem;
+	}
 }
