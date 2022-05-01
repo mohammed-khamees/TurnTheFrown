@@ -6,3 +6,15 @@
 	align-items: center;
 	justify-content: space-between;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.coins {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.coins {
+		width: 90%;
+	}
+}

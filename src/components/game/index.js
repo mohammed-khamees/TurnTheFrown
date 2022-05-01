@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Coins from './../coins';
 import Counter from './../counter';
 import FlipBtn from './../button';
@@ -12,6 +13,7 @@ const Game = () => {
 	const [win, setWin] = useState(false);
 
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
 	const state = useSelector((state) => {
 		return state;
@@ -56,6 +58,8 @@ const Game = () => {
 	};
 
 	useEffect(() => {
+		if (!state.auth.token) navigate('/');
+
 		getUserHighestScore();
 		//eslint-disable-next-line
 	}, []);

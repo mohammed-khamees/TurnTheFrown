@@ -18,3 +18,11 @@
 	color: rgb(255, 83, 72);
 	transition: all 0.3s ease-in-out;
 }
+
+@media screen and (max-width: 767px) {
+	.flipBtn {
+		width: 80px;
+		height: 80px;
+		font-size: 1.5rem;
+	}
+}

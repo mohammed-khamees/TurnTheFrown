@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import './style.css';
 
 const Dashboard = () => {
 	const [records, setRecords] = useState([]);
+	const navigate = useNavigate();
 
 	const auth = useSelector((state) => {
 		return state.auth;
@@ -16,6 +18,7 @@ const Dashboard = () => {
 	};
 
 	useEffect(() => {
+		if (!auth.token) navigate('/');
 		getAllRecords();
 		//eslint-disable-next-line
 	}, []);

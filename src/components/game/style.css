@@ -1,6 +1,6 @@
 .winBg {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background-image: url('./../../assets/win.gif');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -16,6 +16,7 @@
 	align-items: center;
 	justify-content: center;
 	text-transform: capitalize;
+	text-align: center;
 }
 
 .winBg p {
@@ -43,4 +44,36 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+	.winBg p {
+		font-size: 3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.winBg .newRecord {
+		font-size: 1.8rem;
+	}
+
+	.winBg button {
+		padding: 0.3rem 1rem;
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.winBg p {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.winBg .newRecord {
+		font-size: 1.2rem;
+	}
+
+	.winBg button {
+		padding: 0.3rem 1rem;
+		font-size: 1rem;
+	}
 }

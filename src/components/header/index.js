@@ -32,7 +32,7 @@ const Header = () => {
 	};
 
 	useEffect(() => {
-		getUserHighestScore();
+		if (auth.token) getUserHighestScore();
 		//eslint-disable-next-line
 	}, [auth]);
 

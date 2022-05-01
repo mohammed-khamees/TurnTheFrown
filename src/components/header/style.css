@@ -35,6 +35,7 @@ nav {
 	font-size: 2.5rem;
 	transition: all 0.3s ease-in-out;
 	color: rgb(255, 83, 72);
+	z-index: 3;
 }
 
 .bars:hover {
