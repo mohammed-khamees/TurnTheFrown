@@ -5,12 +5,15 @@ import Counter from './../counter';
 import FlipBtn from './../button';
 import { clear, retry } from './../../reducers/coins';
 import { useDispatch, useSelector } from 'react-redux';
+import { BsInfoCircleFill } from 'react-icons/bs';
+import { AiOutlineClose } from 'react-icons/ai';
 import axios from 'axios';
 import './style.css';
 
 const Game = () => {
 	const [userHighestScore, setUserHighestScore] = useState('');
 	const [win, setWin] = useState(false);
+	const [instruction, setInstruction] = useState(false);
 
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
@@ -91,6 +94,35 @@ const Game = () => {
 					setWin={setWin}
 				/>
 			</div>
+			<div className="instruction" onClick={() => setInstruction(true)}>
+				<BsInfoCircleFill />
+				<p>How To pley</p>
+			</div>
+
+			{instruction && (
+				<div className="hider">
+					<AiOutlineClose
+						className="close"
+						onClick={() => {
+							setInstruction(false);
+						}}
+					/>
+					<div className="instructionModel">
+						<p>1. to select a coin press on it.</p>
+						<p>2. to unselect a coin re-press on it.</p>
+						<p>3. you can't choose more than three.</p>
+						<p>
+							4. you can't press the flip button unless you've choosen three
+							coins.
+						</p>
+						<p>5. each flip of three coin counted as a turn</p>
+						<p>
+							6. the game will end till you flip all the coins to the happy
+							face.
+						</p>
+					</div>
+				</div>
+			)}
 		</>
 	);
 };

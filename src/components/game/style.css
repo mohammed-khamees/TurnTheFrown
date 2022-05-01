@@ -46,6 +46,46 @@
 	justify-content: space-between;
 }
 
+.instruction {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	cursor: pointer;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+.instruction p {
+	margin-left: 0.5rem;
+}
+
+.instructionModel {
+	background-color: rgb(217, 214, 214);
+	width: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	text-align: center;
+	border-radius: 3rem;
+	border: 3px solid orange;
+	padding: 1rem;
+	text-transform: capitalize;
+}
+
+.instructionModel p {
+	width: 90%;
+	text-align: left;
+	margin-bottom: 0.5rem;
+}
+
 @media screen and (max-width: 1024px) and (min-width: 601px) {
 	.winBg p {
 		font-size: 3rem;
@@ -58,6 +98,11 @@
 
 	.winBg button {
 		padding: 0.3rem 1rem;
+		font-size: 1.2rem;
+	}
+
+	.instructionModel {
+		width: 80%;
 		font-size: 1.2rem;
 	}
 }
@@ -74,6 +119,11 @@
 
 	.winBg button {
 		padding: 0.3rem 1rem;
+		font-size: 1rem;
+	}
+
+	.instructionModel {
+		width: 80%;
 		font-size: 1rem;
 	}
 }
