@@ -12,7 +12,7 @@
 
 3- add a variable called `REACT_APP_API_URL` in the `.env` file and assign it a value `https://turnthefrown.herokuapp.com/`
 
-    - REACT_APP_API_URL=https://turnthefrown.herokuapp.com/
+    REACT_APP_API_URL=https://turnthefrown.herokuapp.com/
 
 4- `npm install`
 
