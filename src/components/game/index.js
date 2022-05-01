@@ -57,6 +57,7 @@ const Game = () => {
 
 	useEffect(() => {
 		getUserHighestScore();
+		//eslint-disable-next-line
 	}, []);
 
 	return (

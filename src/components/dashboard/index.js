@@ -16,8 +16,8 @@ const Dashboard = () => {
 	};
 
 	useEffect(() => {
-		console.log(auth.username);
 		getAllRecords();
+		//eslint-disable-next-line
 	}, []);
 
 	return (

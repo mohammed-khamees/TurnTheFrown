@@ -33,6 +33,7 @@ const Header = () => {
 
 	useEffect(() => {
 		getUserHighestScore();
+		//eslint-disable-next-line
 	}, [auth]);
 
 	const signOut = () => {
