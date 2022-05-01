@@ -23,7 +23,7 @@ function Landing() {
 				</div>
 
 				<div className="rules">
-					<p>How to play the game:</p>
+					<p>The Game rules:</p>
 					<ul>
 						<li>you have 4 coins.</li>
 						<li>each coin has two faces sad face and happy face.</li>
@@ -36,8 +36,8 @@ function Landing() {
 						</li>
 						<li>each three coins flip count as a turn.</li>
 						<li>
-							the least turn you have to flip all of the coins to happy face the
-							highest score you are going to get.
+							the least turns you have done to flip all of the coins to happy
+							face the highest score you are going to get.
 						</li>
 					</ul>
 					<button

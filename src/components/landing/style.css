@@ -1,6 +1,6 @@
 .Landingbg {
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	background-image: url('./../../assets/halfbg.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -23,6 +23,9 @@
 
 .animatedGIF {
 	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .animatedGIF img {
@@ -133,10 +136,162 @@
 	color: rgb(255, 170, 4);
 	transition: all 0.3s ease-in-out;
 	cursor: pointer;
-	z-index: 2;
+	z-index: 5;
 }
 
 .close:hover {
 	color: rgb(255, 83, 72);
 	transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.rules {
+		font-size: 1.2rem;
+	}
+
+	.rules ul {
+		width: 90%;
+		font-size: 0.8rem;
+	}
+
+	.playBtn {
+		margin-top: 1rem;
+		width: 50%;
+		height: 50px;
+		font-size: 1.5rem;
+	}
+
+	.model {
+		height: 250px;
+		font-size: 1.8rem;
+		padding: 0 1rem;
+	}
+
+	.model button {
+		width: 40%;
+		height: 50px;
+		font-size: 1.4rem;
+	}
+
+	.close {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 550px) {
+	.Landingbg {
+		display: none;
+	}
+
+	.Container {
+		flex-direction: column;
+	}
+
+	.animatedGIF {
+		width: 75%;
+	}
+
+	.animatedGIF img {
+		width: 50%;
+	}
+
+	.rules {
+		margin-top: 0;
+		width: 100%;
+		height: 60%;
+		padding: 1rem 1rem 0;
+		font-size: 1rem;
+		background-color: rgb(255, 170, 4);
+	}
+
+	.rules ul {
+		width: 90%;
+		font-size: 0.7rem;
+	}
+
+	.playBtn {
+		margin: 1rem 0;
+		width: 20%;
+		height: 35px;
+		font-size: 1.2rem;
+	}
+
+	.model {
+		width: 55%;
+		height: 120px;
+		font-size: 1.2rem;
+	}
+
+	.model button {
+		width: 30%;
+		height: 30px;
+		font-size: 1rem;
+		margin-top: 0.8rem;
+	}
+
+	.close {
+		font-size: 2.5rem;
+	}
+}
+
+@media screen and (max-width: 549px) {
+	.Landingbg {
+		display: none;
+	}
+
+	.Container {
+		flex-direction: column;
+	}
+
+	.animatedGIF {
+		width: 100%;
+	}
+
+	.animatedGIF img {
+		width: 50%;
+	}
+
+	.rules {
+		margin-top: 0;
+		width: 100%;
+		height: 60%;
+		padding: 1rem 1rem 0;
+		font-size: 1rem;
+		background-color: rgb(255, 170, 4);
+	}
+
+	.rules ul {
+		width: 90%;
+		font-size: 0.7rem;
+	}
+
+	.playBtn {
+		margin: 1rem 0;
+		width: 40%;
+		height: 35px;
+		font-size: 1.2rem;
+	}
+
+	.hider {
+		height: 100%;
+	}
+
+	.model {
+		width: 70%;
+		height: 120px;
+		font-size: 1rem;
+		padding: 1rem 1rem;
+		border-radius: 2rem;
+	}
+
+	.model button {
+		width: 40%;
+		height: 25px;
+		font-size: 0.7rem;
+		margin-top: 0.5rem;
+	}
+
+	.close {
+		font-size: 2rem;
+	}
 }
